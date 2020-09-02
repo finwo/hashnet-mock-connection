@@ -1,6 +1,6 @@
 {
   "name": "hashnet-mock-connection",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Mock connection for hashnet tests",
   "main": "src/index.js",
   "scripts": {
