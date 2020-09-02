@@ -4,7 +4,7 @@
   "description": "Mock connection for hashnet tests",
   "main": "src/index.js",
   "scripts": {
-    "test": "tape mock/**/*.test.js src/**/*.test.js",
+    "test": "tape src/**/*.test.js",
     "postpublish": "PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{print $2}' | sed 's/[\",]//g' | tr -d '[[:space:]]') && npm deprecate \"hashnet-mock-connection@<${PACKAGE_VERSION}\" \"Rolling release, please update to ${PACKAGE_VERSION}\""
   },
   "repository": {
