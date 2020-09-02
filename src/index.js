@@ -26,3 +26,9 @@ module.exports = (Adelay = 0, Bdelay = 0) => {
   pipeFactory(fds[1], fds[0], Bdelay);
   return fds;
 };
+
+module.exports.linkPeers = function (peerA, peerB, Adelay = 0, Bdelay = 0) {
+  const conn = module.exports(Adelay, Bdelay);
+  peerA.addConnection(conn[0]);
+  peerB.addConnection(conn[1]);
+}
